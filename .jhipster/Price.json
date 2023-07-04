@@ -1,0 +1,45 @@
+{
+  "applications": ["ecommerce"],
+  "changelogDate": "20230704044355",
+  "entityTableName": "price",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "Currecny",
+      "fieldValues": "EUR,USD,ARS"
+    }
+  ],
+  "name": "Price",
+  "relationships": [
+    {
+      "otherEntityName": "brand",
+      "relationshipName": "brand",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "product",
+      "relationshipName": "product",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,15 @@
+{
+  "applications": ["ecommerce"],
+  "changelogDate": "20230704044354",
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Product",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

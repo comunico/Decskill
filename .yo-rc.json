@@ -1,5 +1,6 @@
 {
   "generator-jhipster": {
+    "applicationIndex": 0,
     "applicationType": "monolith",
     "authenticationType": "jwt",
     "baseName": "ecommerce",
@@ -16,12 +17,13 @@
     "enableHibernateCache": false,
     "enableSwaggerCodegen": false,
     "enableTranslation": false,
-    "entities": [],
+    "entities": ["Brand", "Product", "Price"],
     "entitySuffix": "",
     "gradleEnterpriseHost": null,
     "jhiPrefix": "jhi",
     "jhipsterVersion": "8.0.0-beta.1",
     "jwtSecretKey": "M2JmYzg3N2YwZWU3N2JkMzliMzBjODFjMGFhODRhY2IyODEyYmEwMTUzNGVkODY0YTUyZmExZTUxNGM3NzBiOGM0YmQ5ZGM4ODlhYjAwYzFlYjY3MTQ1NjA3ZmRmNmY2ODY0YmNmN2JlNmE0ZmVjMzBmNzY2NTQ1YTE5MWNkN2Q=",
+    "lastLiquibaseTimestamp": 1688445835000,
     "messageBroker": false,
     "microfrontend": false,
     "microfrontends": [],

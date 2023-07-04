@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "c89bb985-13df-492e-b24f-eb033d4b46bb",
+		"name": "Decskill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.id_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin\",\n  \"rememberMe\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/authenticate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prices filtrados - Test 1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dateApply\": \"2020-06-14T10:00:00Z\",\n  \"idProduct\": 35455,\n  \"idBrand\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/prices/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prices",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prices filtrados - Test 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dateApply\": \"2020-06-14T16:00:00Z\",\n  \"idProduct\": 35455,\n  \"idBrand\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/prices/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prices",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prices filtrados - Test 3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dateApply\": \"2020-06-14T21:00:00Z\",\n  \"idProduct\": 35455,\n  \"idBrand\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/prices/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prices",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prices filtrados - Test 4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dateApply\": \"2020-06-15T10:00:00Z\",\n  \"idProduct\": 35455,\n  \"idBrand\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/prices/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prices",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prices filtrados - Test 5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dateApply\": \"2020-06-16T21:00:00Z\",\n  \"idProduct\": 35455,\n  \"idBrand\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/prices/filter",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prices",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

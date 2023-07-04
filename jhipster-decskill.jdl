@@ -1,0 +1,40 @@
+application {
+  config {
+    baseName ecommerce
+    applicationType monolith
+    packageName com.decskill
+    authenticationType jwt
+    prodDatabaseType postgresql
+    clientFramework vue
+  }
+  entities *
+}
+
+entity Brand {
+	name String
+}
+
+entity Product {
+	name String
+}
+
+entity Price {
+	startDate Instant
+	endDate Instant
+	priority Integer
+	price Float
+        currency Currecny
+}
+
+enum Currecny {
+    EUR, USD, ARS
+}
+
+relationship ManyToOne {
+	Price{brand} to Brand
+	Price{product} to Product
+}
+
+// Set service options to all except few
+service all with serviceImpl
+
